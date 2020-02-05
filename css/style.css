@@ -8480,7 +8480,7 @@ h1, h2, h3, h4, h5,
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top center;
-      height: 600px;
+      height: relative;
       position: relative;
       z-index: 0; }
       @media (max-width: 1199.98px) {
