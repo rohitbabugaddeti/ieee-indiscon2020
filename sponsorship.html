@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>INDISCON | 2020 SPONSORSHIP</title>
+    <title>IEEE | INDISCON 2020 SPONSORSHIP</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="images/favicon.png"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -26,11 +25,15 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Style11.css"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" media="all" />
+    <script src="js/jquery-1.7.2.min.js"></script>
     <style>
      div {
        text-align: justify;
        text-justify: inter-word;
-       font-family: 'Times New Roman';
+       font-family: 'calibri';
        font-size: 20px ;
      }
      </style>
@@ -42,60 +45,103 @@
          padding: 0px;
        }
        </style>
- 
+    <script>  
+     // building select nav for mobile width only 
+        $(function(){
+          // building select menu
+          $('<select />').appendTo('nav');
+        
+          // building an option for select menu
+          $('<option />', {
+            'selected': 'selected',
+            'value' : '',
+            'text': 'Choose Page...'
+          }).appendTo('nav select');
+        
+          $('nav ul li a').each(function(){
+            var target = $(this);
+        
+            $('<option />', {
+              'value' : target.attr('href'),
+              'text': target.text()
+            }).appendTo('nav select');
+        
+          });
+        
+          // on clicking on link
+          $('nav select').on('change',function(){
+            window.location = $(this).find('option:selected').val();
+          });
+        });
+        
+        // show and hide sub menu
+        $(function(){
+          $('nav ul li').hover(
+            function () {
+              //show its submenu
+              $('ul', this).slideDown(150);
+            }, 
+            function () {
+              //hide its submenu
+              $('ul', this).slideUp(150);			
+            }
+          );
+        });
+        //end
+        </script> 
 </head>
 
   <body>
     <img src="images/weblogos.png" class='responsive'></img>
-    <!--<div class="py-md-5 py-4 border-bottom">
-    	<div class="container">
-    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
-    			<div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
-		    		<a class="navbar-brand" href="index.html">Dentista<span>Dental Clinic</span></a>
-	    		</div>
-	    		<div class="col-md-4 order-md-1 d-flex topper mb-md-0 mb-2 align-items-center text-md-right">
-	    			<div class="icon d-flex justify-content-center align-items-center order-md-last">
-	    				<span class="icon-map"></span>
-	    			</div>
-	    			<div class="pr-md-4 pl-md-0 pl-3 text">
-					    <p class="con"><span>Free Call</span> <span>+1 234 456 78910</span></p>
-					    <p class="con">198 West 21th Street, Suite 721 New York NY 10016</p>
-				    </div>
-			    </div>
-			    <div class="col-md-4 order-md-3 d-flex topper mb-md-0 align-items-center">
-			    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-			    	<div class="text pl-3 pl-md-3">
-					    <p class="hr"><span>Open Hours</span></p>
-					    <p class="time"><span>Mon - Sat:</span> <span>8:00am - 9:00pm</span> Sun: Closed</p>
-				    </div>
-			    </div>
-		    </div>
-		  </div>
-    </div> -->
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container d-flex align-items-center">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav m-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
-	        	<li class="nav-item"><a href="committees.html" class="nav-link">Committees</a></li>
-            <li class="nav-item"><a href="program.html" class="nav-link">Program</a></li>
-            <li class="nav-item"><a href="papers.html" class="nav-link">Call&nbspfor&nbspPapers</a></li>
-	        	<li class="nav-item"><a href="registration.html" class="nav-link">Registration</a></li>
-	        	<li class="nav-item"><a href="author.html" class="nav-link">Author</a></li>
-            <li class="nav-item"><a href="delegate.html" class="nav-link">Delegate</a></li>
-            <li class="nav-item"><a href="venue.html" class="nav-link">Venue/Travel</a></li>
-            <li class="nav-item active"><a href="sponsorship.html" class="nav-link">Sponsorship</a></li>
-            
-            
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
-    
+  
+    <header>
+      <div id="fdw"> 
+        <nav>
+          
+					<ul>
+							<li><a href="index.html"><b>Home</b><span class="arrow"></span></a>
+              </li>
+              <li><a href="committees.html" ><b>Committees</b></a></li>
+          
+              <li ><a ><b>&NonBreakingSpace;&NonBreakingSpace;Program &NonBreakingSpace;&NonBreakingSpace;</b><span class="arrow"></span></a>
+              <ul style="display: none;" class="sub_menu">
+                <li class="arrow_top"></li>
+                <li ><a href="glance.html" ><b>Programs at a glance</b></a></li>
+                <li><a href="key.html"><b>Key-note Talk</b></a></li>
+                <li><a href="invited.html"><b>Invited Talks</b></a></li>
+                <li><a href="tutorials.html"><b>Tutorials</b></a></li>
+                <li><a href="workshops.html"><b>Workshops</b></a></li>
+                <li><a href="wie.html"><b>WIE event</b></a></li>
+              </ul>
+            </li>
+              <li><a href='registration.html'><b>Registration</b></a></li>
+              <li ><a><b>Author Information</b></a>
+              <ul style="display: none;" class="sub_menu">
+                <li class="arrow_top"></li>
+                <li><a href="papers.html"><b>Information for Authors </b></a></li>
+                <li><a href="tracks.html"><b>Tracks of the conference </b></a></li>
+                <li><a href="first_call_for_papers.html"><b>First Call for papers</b></a></li>
+                <li><a href="call_for_tutorials.html"><b>Call for Tutorial proposal</b></a></li>
+                <li><a href="call_for_workshop.html"><b>Call for Workshop proposal</b></a></li>
+                <li><a href="call_for_special_sessions.html"><b>Call for Special Sessions</b></a></li>
+</ul>  </li>
+              <li><a><b>Delegate Information</b></a>
+              <ul style="display: none;" class="sub_menu">
+                <li class="arrow_top"></li>
+                <li><a href="accommodation.html"><b>Accommodation</b></a></li>
+                <li><a href="visa.html"><b>Visa</b></a></li>
+                </ul>
+              </li>
+              <li ><a ><b>&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; Venue/Travel&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;</b></a>
+              <ul style="display: none;" class="sub_menu">
+                <li class="arrow_top"></li>
+                <li><a  href="about_venue_city.html"><b>About venue city</b></a></li>
+                <li><a href="about_venue.html"><b>About conference venue</b></a></li>
+              </ul>  </li>
+              <li class="current"><a href="sponsorship.html"><b>Sponsorship</b></a></li>
+							<li>
+
+  </nav>
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/download.jpg');" data-stellar-background-ratio="1.0">
       <div class="overlay"></div>
       <div class="container">
@@ -161,8 +207,6 @@
 
 
   <br><br>
-   
-		
   <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
    <div class="row mb-50">
@@ -171,7 +215,7 @@
             <h2 class="ftco-heading-2 logo">Indiscon 2020</h2>
             <p class="">The objective of the conference is to provide a platform for the scientific and engineering community</p>
             <div class="meta">
-              <div><a href="#"><span class="icon-calendar"></span> 25-26 July, 2020</a></div>
+              <div><a href="#"><span class="icon-calendar"></span> 25<sup>th</sup>-26<sup>th</sup> July, 2020</a></div>
               
             </div>
           </div>
@@ -181,34 +225,34 @@
           <div class="ftco-footer-widget mb-0 ml-md-0">
             <h2 class="ftco-heading-2">Links</h2>
             <ul class="list-unstyled">
-              <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-              <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Committees</a></li>
-              <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Program</a></li>
-              <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Call for Papers</a></li>
-              <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Registration</a></li>
-            <!-- <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Author</a></li>
-              <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Delegate</a></li>
-              <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Venue/Travel</a></li>
-              <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Sponsorship</a></li> -->
+              <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+              <li><a href="committees.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Committees</a></li>
+              <li><a href="program.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Program</a></li>
+              <li><a href="registration.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Registration</a></li>
+              <li><a href="author"><span class="ion-ios-arrow-round-forward mr-2"></span>Author Information</span></a></li>
+          <!--    <li><a href="delegate.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Delegate Information</a></li>
+              <li><a href="venue.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Venue/Travel</a></li>
+              <li><a href="sponsorship.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Sponsorship</a></li>
+            -->
             </ul>
           </div>
         </div>
         <div class="col-md">
           <div class="ftco-footer-widget mb-5">
             <div class="ftco-footer-widget mb-5">
-         <!--     <h2 class="ftco-heading-2">Have any Questions?</h2>  -->
+        
               <div class="block-23 mb-3">
                 <ul>
                   <li><span class="icon icon-map-marker"></span><span class="text">Gayatri Vidya Parishad College of Engineering(A)</span></li>
                   <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9490748736</span></a></li>
-                  <li><a href="bhanucvk@gvpce.ac.in"><span class="icon icon-envelope"></span><span class="text">bhanucvk@gvpce.ac.in</span></a></li>
+                  <li><a href="info@indiscon2020.org"><span class="icon icon-envelope"></span><span class="text">info@indiscon2020.org</span></a></li>
                 </ul>
               </div>
  
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-linkedin"></span></a></li>
               </ul>
             </div>
           </div>
@@ -232,8 +276,8 @@
       <div class="row">
         <div class="col-md-12 text-center">
  
-          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
- Copyright &copy;Team of Indiscon 2020 | All Rights Reserved | bhanucvk@gvpce.ac.in </a>
+          <p>
+ Copyright &copy;Team of Indiscon 2020 | All Rights Reserved | info@indiscon2020.org </a>
  </p>
         </div>
       </div>

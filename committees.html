@@ -2,10 +2,9 @@
 <html lang="en">
   <head>
     <title>INDISCON | 2020 COMMITTEES</title>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="images/favicon.png"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -26,13 +25,18 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Style11.css"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" media="all" />
+    <script src="js/jquery-1.7.2.min.js"></script>
     <style>
      div {
        text-align: justify;
        text-justify: inter-word;
-       font-family: 'Times New Roman';
+       font-family: 'calibri';
        font-size: 20px ;
-     }
+	 }
+	
      </style>
      <style>
        .center {
@@ -42,60 +46,104 @@
          padding: 0px;
        }
        </style>
- 
+    <script>  
+     // building select nav for mobile width only 
+        $(function(){
+          // building select menu
+          $('<select />').appendTo('nav');
+        
+          // building an option for select menu
+          $('<option />', {
+            'selected': 'selected',
+            'value' : '',
+            'text': 'Choose Page...'
+          }).appendTo('nav select');
+        
+          $('nav ul li a').each(function(){
+            var target = $(this);
+        
+            $('<option />', {
+              'value' : target.attr('href'),
+              'text': target.text()
+            }).appendTo('nav select');
+        
+          });
+        
+          // on clicking on link
+          $('nav select').on('change',function(){
+            window.location = $(this).find('option:selected').val();
+          });
+        });
+        
+        // show and hide sub menu
+        $(function(){
+          $('nav ul li').hover(
+            function () {
+              //show its submenu
+              $('ul', this).slideDown(150);
+            }, 
+            function () {
+              //hide its submenu
+              $('ul', this).slideUp(150);			
+            }
+          );
+        });
+        //end
+        </script> 
 </head>
 
   <body>
-	<img src="images/weblogos.png" class='responsive'></img>
-    <!--<div class="py-md-5 py-4 border-bottom">
-    	<div class="container">
-    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
-    			<div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
-		    		<a class="navbar-brand" href="index.html">Dentista<span>Dental Clinic</span></a>
-	    		</div>
-	    		<div class="col-md-4 order-md-1 d-flex topper mb-md-0 mb-2 align-items-center text-md-right">
-	    			<div class="icon d-flex justify-content-center align-items-center order-md-last">
-	    				<span class="icon-map"></span>
-	    			</div>
-	    			<div class="pr-md-4 pl-md-0 pl-3 text">
-					    <p class="con"><span>Free Call</span> <span>+1 234 456 78910</span></p>
-					    <p class="con">198 West 21th Street, Suite 721 New York NY 10016</p>
-				    </div>
-			    </div>
-			    <div class="col-md-4 order-md-3 d-flex topper mb-md-0 align-items-center">
-			    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-			    	<div class="text pl-3 pl-md-3">
-					    <p class="hr"><span>Open Hours</span></p>
-					    <p class="time"><span>Mon - Sat:</span> <span>8:00am - 9:00pm</span> Sun: Closed</p>
-				    </div>
-			    </div>
-		    </div>
-		  </div>
-    </div> -->
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container d-flex align-items-center">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav m-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
-	        	<li class="nav-item active"><a href="committees.html" class="nav-link">Committees</a></li>
-            <li class="nav-item"><a href="program.html" class="nav-link">Program</a></li>
-            <li class="nav-item"><a href="papers.html" class="nav-link">Call&nbspfor&nbspPapers</a></li>
-	        	<li class="nav-item"><a href="registration.html" class="nav-link">Registration</a></li>
-	        	<li class="nav-item"><a href="author.html" class="nav-link">Author</a></li>
-            <li class="nav-item"><a href="delegate.html" class="nav-link">Delegate</a></li>
-            <li class="nav-item"><a href="venue.html" class="nav-link">Venue/Travel</a></li>
-            <li class="nav-item"><a href="sponsorship.html" class="nav-link">Sponsorship</a></li>
-            
-            
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
-    
+    <img src="images/weblogos.png" class='responsive'></img>
+  
+    <header>
+      <div id="fdw"> 
+        
+		<nav>
+          
+			<ul>
+					<li ><a href="index.html"><b>Home</b><span class="arrow"></span></a>
+	  </li>
+	  <li class="current"><a href="committees.html" ><b>Committees</b></a></li>
+  
+	  <li ><a ><b>&NonBreakingSpace;&NonBreakingSpace;Program &NonBreakingSpace;&NonBreakingSpace;</b><span class="arrow"></span></a>
+	  <ul style="display: none;" class="sub_menu">
+		<li class="arrow_top"></li>
+		<li ><a href="glance.html" ><b>Programs at a glance</b></a></li>
+		<li><a href="key.html"><b>Key-note Talk</b></a></li>
+		<li><a href="invited.html"><b>Invited Talks</b></a></li>
+		<li><a href="tutorials.html"><b>Tutorials</b></a></li>
+		<li><a href="workshops.html"><b>Workshops</b></a></li>
+		<li><a href="wie.html"><b>WIE event</b></a></li>
+	  </ul>
+	</li>
+	  <li><a href='registration.html'><b>Registration</b></a></li>
+	  <li><a><b>Author Information</b></a>
+	  <ul style="display: none;" class="sub_menu">
+		<li class="arrow_top"></li>
+		<li><a href="papers.html"><b>Information for Authors </b></a></li>
+		<li><a href="tracks.html"><b>Tracks of the conference </b></a></li>
+		<li><a href="first_call_for_papers.html"><b>First Call for papers</b></a></li>
+		<li><a href="call_for_tutorials.html"><b>Call for Tutorial proposal</b></a></li>
+		<li><a href="call_for_workshop.html"><b>Call for Workshop proposal</b></a></li>
+		<li><a href="call_for_special_sessions.html"><b>Call for Special Sessions</b></a></li>
+</ul>  </li>
+	  <li><a><b>Delegate Information</b></a>
+	  <ul style="display: none;" class="sub_menu">
+		<li class="arrow_top"></li>
+		<li><a href="accommodation.html"><b>Accommodation</b></a></li>
+		<li><a href="visa.html"><b>Visa</b></a></li>
+		</ul>
+	  </li>
+	  <li><a ><b>&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;Venue/Travel &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;</b></a>
+	  <ul style="display: none;" class="sub_menu">
+		<li class="arrow_top"></li>
+		<li><a href="about_venue_city.html"><b>About venue city</b></a></li>
+		<li><a href="about_venue.html"><b>About conference venue</b></a></li>
+	  </ul>  </li>
+	  <li><a href="sponsorship.html"><b>Sponsorship</b></a></li>
+					<li>
+
+</nav>
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/download.jpg');" data-stellar-background-ratio="1.0">
       <div class="overlay"></div>
       <div class="container">
@@ -107,29 +155,97 @@
         </div>
       </div>
     </section>
+	<section class="ftco-section">
+		<h1 style="text-align: center">Steering Committee </h1> <br>
+		<div><div class="container">
+			<div class="row justify-content-center" >
+			<div class="col-md-6 col-lg-3 ftco-animate">
+		<div class="staff">
+			<div class="img-wrap d-flex align-items-stretch">
+				<div class="img align-self-stretch" style="background-image: url(images/ProfPSRao.jpg);"></div>
+			</div>
+			<div class="text pt-3 text-center">
+				<h3>Prof. Dr. Ing. P. S. Rao<br> President </h3>
+				<span class="position mb-2"></span>
+				<div class="faded">
+					<p style="text-align: center;">Gayatri Vidya Parishad</p>
+					
+  </div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 col-lg-3 ftco-animate">
+		<div class="staff">
+			<div class="img-wrap d-flex align-items-stretch">
+				<div class="img align-self-stretch" style="background-image: url(images/Vice_President.jpg);"></div>
+			</div>
+			<div class="text pt-3 text-center">
+				<h3>Sri D. Dakshina Murthy<br>Vice President</h3>
+				<span class="position mb-2"></span>
+				<div class="faded">
+					<p style="text-align: center;" >Gayatri Vidya Parishad </p style="text-align: center;">
+					
+  </div>
+			</div>
+		</div>
+	</div>
 
+	<div class="col-md-6 col-lg-3 ftco-animate">
+		<div class="staff">
+			<div class="img-wrap d-flex align-items-stretch">
+				<div class="img align-self-stretch" style="background-image: url(images/sarma.jpg);"></div>
+			</div>
+			<div class="text pt-3 text-center">
+				<h3>Prof. P.V. Sarma<br> Vice President</h3>
+				<span class="position mb-2"></span>
+				<div class="faded">
+					<p style="text-align: center;">Gayatri Vidya Parishad</p>
+					
+  </div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="col-md-6 col-lg-3 ftco-animate">
+		<div class="staff">
+			<div class="img-wrap d-flex align-items-stretch">
+				<div class="img align-self-stretch" style="background-image: url(images/soma.jpg);"></div>
+			</div>
+			<div class="text pt-3 text-center">
+				<h3>Prof. P. Soma Raju<br>Secretary</h3>
+				<span class="position mb-2"></span>
+				<div class="faded">
+					<p style="text-align: center;">Gayatri Vidya Parishad </p>
+					
+  </div>
+			</div>
+		</div>
+	</div>
+	</div>
+			</div>
+	
+	</section>
     <section class="ftco-section">
 					<div>	<h2 style="text-align: center; font-family: 'Times New Roman', Times, serif;">General Chairs</h2><div></div><br><br>
 			<div class="container">
-				<div class="row">
+				<div class="row justify-content-center" >
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch" style="background-image: url(images/chairieeeindia.jpg);"></div>
 							</div>
 							<div class="text pt-3 text-center">
-								<h3>Prof S.N. Singh<br>Chair IEEE India Council</h3>
+								<h3>Prof. S.N. Singh<br>Chair IEEE India Council</h3>
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;">Vice-Chancellor<br>
 										Madan Mohan Malaviya University of Technology
 										Gorakhpur-273010, India</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -145,12 +261,7 @@
 								<div class="faded">
 									<p style="text-align: center;">CEO and MD<br>
 										Andhra Electronics Ltd, Kakinada</pstyle="text-align: center;">
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -161,17 +272,12 @@
 								<div class="img align-self-stretch" style="background-image: url(images/abkrao.jpg);"></div>
 							</div>
 							<div class="text pt-3 text-center">
-								<h3>Prof A.B. Koteswara Rao<br>Principal</h3>
+								<h3>Prof. A.B. Koteswara Rao<br>Principal</h3>
 								<span class="position mb-2"></span>
 								<div class="faded">
-									<p style="text-align: center;">>Gayatri Vidya Parishad College of Engineering(A)
+									<p style="text-align: center;">Gayatri Vidya Parishad College of Engineering(A)
 										Madhurawada, Visakhapatnam</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -180,25 +286,22 @@
 				</section>
 
 					<section class="ftco-section">
-						<div><h1 style="text-align: center;">Organizing Committee </h1> <br> <br>
+						<div><h1 style="text-align: center">Organizing Committee </h1> <br>
 							<div class="container">
-								<div class="row">
+								<div class="row justify-content-center" >
 							<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
+							<h2 style="text-align: center">Chair </h2>
 							<div class="img-wrap d-flex align-items-stretch">
+								
 								<div class="img align-self-stretch" style="background-image: url(images/bhanu.png);"></div>
 							</div>
 							<div class="text pt-3 text-center">
-								<h3>Prof C.V.K.Bhanu<br>Dean</h3>
+								<h3>Prof. C.V.K.Bhanu<br>Dean Academic Programs (PG and Research)</h3>
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;">Gayatri Vidya Parishad College of Engineering(A)&nbspMadhurawada, Visakhapatnam</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -207,28 +310,49 @@
 
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
+							<h2 style="text-align: center">Vice-Chair </h2>
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch" style="background-image: url(images/sairam.png);"></div>
 							</div>
 							<div class="text pt-3 text-center">
-								<h3>Prof Sairam<br>HOD ECE</h3>
+								<h3>Prof. M.V.S. Sairam<br>HOD, ECE</h3>
 								<span class="position mb-2">  </span>
 								<div class="faded">
-									<p style="text-align: center;">Gayatri Vidya Parishad College of Engineering(A)
+									<p style="text-align: center;">Gayatri Vidya Parishad College of Engineering(A), 
 										Madhurawada, Visakhapatnam</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
 					</div>
 
-
 					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<h2 style="text-align: center">Vice-Chair </h2>
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/sss.png);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Prof. G.V.E Satish Kumar<br>EEE Dept. , & IEEE SB Counselor</h3>
+								<span class="position mb-2">  </span>
+								<div class="faded">
+									<p style="text-align: center;">Gayatri Vidya Parishad College of Engineering(A),  
+										Madhurawada, Visakhapatnam</p>
+									
+	              </div>
+							</div>
+						</div>
+					</div>
+
+					</div>
+					</div>
+						</div>
+					</section>
+
+					<section class="ftco-section">
+						<div><div class="container">
+							<div class="row justify-content-center" >
+							<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch" style="background-image: url(images/amit2.jpg);"></div>
@@ -238,12 +362,7 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;">CEO, Bio Axis DNA Research Centre (P) Ltd, Hyderabad</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -257,13 +376,8 @@
 								<h3>Dr. Abraham Varughese</h3>
 								<span class="position mb-2"></span>
 								<div class="faded">
-									<p style="text-align: center;" > Scientist – G NSTL, DRDO</pstyle="text-align: center;">
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									<p style="text-align: center;" > Scientist – G NSTL, DRDO</p style="text-align: center;">
+									
 	              </div>
 							</div>
 						</div>
@@ -279,12 +393,7 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;"> IEEE India Council</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -304,25 +413,20 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;"> IEEE India Council</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
 					</div>
 					</div>
-
+							</div>
 					
 					</section>
 					<section class="ftco-section">
 						<div>
 					<h2 style="text-align: center;">Finance Committee</h2>
 					<div class="container">
-						<div class="row">
+						<div class="row justify-content-center" >
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
@@ -334,12 +438,7 @@
 								<div class="faded">
 									<p style="text-align: center;">Gayatri Vidya Parishad College of Engineering(A)
 										Madhurawada, Visakhapatnam </p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -357,12 +456,7 @@
 								<div class="faded">
 									<p style="text-align: center;">Gayatri Vidya Parishad College of Engineering(A)
 										Madhurawada, Visakhapatnam </p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -378,25 +472,20 @@
 <h2 style="text-align: center;">Technical Program Chair</h2>
 
 <div class="container">
-	<div class="row">
+	<div class="row justify-content-center" >
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch" style="background-image: url(images/deepikarani.png);"></div>
 							</div>
 							<div class="text pt-3 text-center">
-								<h3 style="text-align: center;">Prof N. Deepika Rani<br>Vice Chair IEEE Vizag Bay Sub-Section </h3>
+								<h3 style="text-align: center;">Prof. N. Deepika Rani<br>Vice Chair IEEE Vizag Bay Sub-Section </h3>
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;">
 										Professor Dept of ECE, <br>Gayatri Vidya Parishad College of Engineering(A)
 										Madhurawada, Visakhapatnam</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -412,7 +501,7 @@
 						<div>
 <h2 style="text-align: center;">Publications Chair</h2>
 <div class="container">
-	<div class="row">
+	<div class="row justify-content-center" >
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
@@ -423,12 +512,7 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;"> </p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -445,7 +529,7 @@
 										Tutorials
 									</h2>
 									<div class="container">
-										<div class="row">
+										<div class="row justify-content-center" >
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
@@ -456,12 +540,7 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;"> IEEE India Council</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -473,23 +552,18 @@
 	Workshop
 </h2>
 <div class="container">
-	<div class="row">
+	<div class="row justify-content-center" >
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch" style="background-image: url(images/jadeja.jpg);"></div>
 							</div>
 							<div class="text pt-3 text-center">
-								<h3 style="text-align: center;">Dr R.B. Jedaja</h3>
+								<h3 style="text-align: center;">Dr. R.B. Jedaja</h3>
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;">IEEE India Council </p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -503,24 +577,19 @@
 							<div>
 <h2 style="text-align: center;">WIE and YP Committee</h2>
 <div class="container">
-	<div class="row">
+	<div class="row justify-content-center" >
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch" style="background-image: url(images/leelarani.png);"></div>
 							</div>
 							<div class="text pt-3 text-center">
-								<h3 style="text-align: center;">Prof. Leela Rani Dept of IT</h3>
+								<h3 style="text-align: center;">Dr. Leela Rani</h3>
 								<span class="position mb-2"></span>
 								<div class="faded">
-									<p style="text-align: center;">Gayatri Vidya Parishad College of Engineering(A)
+									<p style="text-align: center;">Dept of ECE, Gayatri Vidya Parishad College of Engineering(A)
 										Madhurawada, Visakhapatnam </p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -539,12 +608,7 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;">IEEE India Council </p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -561,12 +625,7 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;">IEEE Hyderabad Section</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -582,12 +641,7 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;"> IEEE India Council</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+								
 	              </div>
 							</div>
 						</div>
@@ -601,7 +655,7 @@
 					<h2 style="text-align: center;">Registrations Committe</h2>
 
 					<div class="container">
-						<div class="row">
+						<div class="row justify-content-center" >
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
@@ -612,12 +666,7 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;"> IEEE India Council</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+								
 	              </div>
 							</div>
 						</div>
@@ -629,7 +678,7 @@
 							<div>
 <h2 style="text-align: center;">Exhibition and Sponsorship Committee</h2>
 <div class="container">
-	<div class="row">
+	<div class="row justify-content-center" >
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
@@ -640,12 +689,7 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;"> IEEE India Council</p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -661,12 +705,7 @@
 								<span class="position mb-2"></span>
 								<div class="faded">
 									<p style="text-align: center;">IEEE India Council </p>
-									<ul class="ftco-social text-center">
-		                
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-linkedin"></span></a></li>
-		              </ul>
+									
 	              </div>
 							</div>
 						</div>
@@ -702,107 +741,106 @@
 			</div>
 		</section>
 
-		
-  <footer class="ftco-footer ftco-bg-dark ftco-section">
-   <div class="container">
-  <div class="row mb-50">
-       <div class="col-md">
-         <div class="ftco-footer-widget mb-5">
-           <h2 class="ftco-heading-2 logo">Indiscon 2020</h2>
-           <p class="">The objective of the conference is to provide a platform for the scientific and engineering community</p>
-           <div class="meta">
-             <div><a href="#"><span class="icon-calendar"></span> 25-26 July, 2020</a></div>
-             
-           </div>
-         </div>
-        
-       </div>
-       <div class="col-md">
-         <div class="ftco-footer-widget mb-0 ml-md-0">
-           <h2 class="ftco-heading-2">Links</h2>
-           <ul class="list-unstyled">
-             <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-             <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Committees</a></li>
-             <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Program</a></li>
-             <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Call for Papers</a></li>
-             <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Registration</a></li>
-           <!-- <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Author</a></li>
-             <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Delegate</a></li>
-             <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Venue/Travel</a></li>
-             <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Sponsorship</a></li> -->
-           </ul>
-         </div>
-       </div>
-       <div class="col-md">
-         <div class="ftco-footer-widget mb-5">
-           <div class="ftco-footer-widget mb-5">
-        <!--     <h2 class="ftco-heading-2">Have any Questions?</h2>  -->
-             <div class="block-23 mb-3">
-               <ul>
-                 <li><span class="icon icon-map-marker"></span><span class="text">Gayatri Vidya Parishad College of Engineering(A)</span></li>
-                 <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9490748736</span></a></li>
-                 <li><a href="bhanucvk@gvpce.ac.in"><span class="icon icon-envelope"></span><span class="text">bhanucvk@gvpce.ac.in</span></a></li>
-               </ul>
-             </div>
-
-             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-               <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-               <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-               <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-             </ul>
-           </div>
-         </div>
-       </div>
-       <div class="col-md">
-        <div class="ftco-footer-widget mb-5">
-         <!--<h2 class="ftco-heading-2">Opening Hours</h2>
-          <h3 class="open-hours pl-4"><span class="ion-ios-time mr-3"></span>We are open 24/7</h3> -->
-         </div>
-         <div class="ftco-footer-widget mb-5">
-          <h2 class="ftco-heading-2">Have Any Questions?</h2>
-           <form action="#" class="subscribe-form">
-             <div class="form-group">
-               <input type="text" class="form-control mb-2 text-center" placeholder="Ask Here">
-               <input type="submit" value="Submit" class="form-control submit px-3">
-             </div>
-           </form>
-         </div>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-md-12 text-center">
-
-         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;Team of Indiscon 2020 | All Rights Reserved | bhanucvk@gvpce.ac.in </a>
-</p>
-       </div>
-     </div>
-   </div>
- </footer>
- 
-
-
-<!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-migrate-3.0.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/aos.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/jquery.timepicker.min.js"></script>
-<script src="js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="js/google-map.js"></script>
-<script src="js/main.js"></script>
- 
-</body>
-</html>
+		<footer class="ftco-footer ftco-bg-dark ftco-section">
+			<div class="container">
+		   <div class="row mb-50">
+				<div class="col-md">
+				  <div class="ftco-footer-widget mb-5">
+					<h2 class="ftco-heading-2 logo">Indiscon 2020</h2>
+					<p class="">The objective of the conference is to provide a platform for the scientific and engineering community</p>
+					<div class="meta">
+					  <div><a href="#"><span class="icon-calendar"></span> 25<sup>th</sup>-26<sup>th</sup> July, 2020</a></div>
+					  
+					</div>
+				  </div>
+				 
+				</div>
+				<div class="col-md">
+				  <div class="ftco-footer-widget mb-0 ml-md-0">
+					<h2 class="ftco-heading-2">Links</h2>
+					<ul class="list-unstyled">
+					  <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+					  <li><a href="committees.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Committees</a></li>
+					  <li><a href="program.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Program</a></li>
+					  <li><a href="registration.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Registration</a></li>
+					  <li><a href="author"><span class="ion-ios-arrow-round-forward mr-2"></span>Author Information</span></a></li>
+				  <!--    <li><a href="delegate.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Delegate Information</a></li>
+					  <li><a href="venue.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Venue/Travel</a></li>
+					  <li><a href="sponsorship.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Sponsorship</a></li>
+					-->
+					</ul>
+				  </div>
+				</div>
+				<div class="col-md">
+				  <div class="ftco-footer-widget mb-5">
+					<div class="ftco-footer-widget mb-5">
+				
+					  <div class="block-23 mb-3">
+						<ul>
+						  <li><span class="icon icon-map-marker"></span><span class="text">Gayatri Vidya Parishad College of Engineering(A)</span></li>
+						  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9490748736</span></a></li>
+						  <li><a href="info@indiscon2020.org"><span class="icon icon-envelope"></span><span class="text">info@indiscon2020.org</span></a></li>
+						</ul>
+					  </div>
+		 
+					  <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+						<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+						<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+						<li class="ftco-animate"><a href="#"><span class="icon-linkedin"></span></a></li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md">
+				 <div class="ftco-footer-widget mb-5">
+				  <!--<h2 class="ftco-heading-2">Opening Hours</h2>
+				   <h3 class="open-hours pl-4"><span class="ion-ios-time mr-3"></span>We are open 24/7</h3> -->
+				  </div>
+				  <div class="ftco-footer-widget mb-5">
+				   <h2 class="ftco-heading-2">Have Any Questions?</h2>
+					<form action="#" class="subscribe-form">
+					  <div class="form-group">
+						<input type="text" class="form-control mb-2 text-center" placeholder="Ask Here">
+						<input type="submit" value="Submit" class="form-control submit px-3">
+					  </div>
+					</form>
+				  </div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-md-12 text-center">
+		 
+				  <p>
+		 Copyright &copy;Team of Indiscon 2020 | All Rights Reserved | info@indiscon2020.org </a>
+		 </p>
+				</div>
+			  </div>
+			</div>
+		  </footer>
+		  
+		 
+		 
+		 <!-- loader -->
+		 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+		 
+		 
+		 <script src="js/jquery.min.js"></script>
+		 <script src="js/jquery-migrate-3.0.1.min.js"></script>
+		 <script src="js/popper.min.js"></script>
+		 <script src="js/bootstrap.min.js"></script>
+		 <script src="js/jquery.easing.1.3.js"></script>
+		 <script src="js/jquery.waypoints.min.js"></script>
+		 <script src="js/jquery.stellar.min.js"></script>
+		 <script src="js/owl.carousel.min.js"></script>
+		 <script src="js/jquery.magnific-popup.min.js"></script>
+		 <script src="js/aos.js"></script>
+		 <script src="js/jquery.animateNumber.min.js"></script>
+		 <script src="js/bootstrap-datepicker.js"></script>
+		 <script src="js/jquery.timepicker.min.js"></script>
+		 <script src="js/scrollax.min.js"></script>
+		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+		 <script src="js/google-map.js"></script>
+		 <script src="js/main.js"></script>
+		  
+		 </body>
+		 </html>
