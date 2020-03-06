@@ -5552,7 +5552,9 @@ button.bg-dark:focus {
 .d-flex {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
-  display: flex !important; }
+  display: flex !important; 
+  justify-content: center;
+}
 
 .d-inline-flex {
   display: -webkit-inline-box !important;
@@ -8774,9 +8776,9 @@ h1, h2, h3, h4, h5,
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   .staff .img-wrap {
-    height: 300px; }
+    height: 200px; }
   .staff .img {
-    width: 100%;
+    width: 75%;
     display: block;
     background-position: top center;
     -moz-transition: all 0.3s ease;
@@ -8793,7 +8795,7 @@ h1, h2, h3, h4, h5,
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease; }
     .staff .text h3 {
-      font-size: 20px;
+      font-size: 18.5px;
       font-weight: 400;
       margin-bottom: 0;
       -moz-transition: all 0.3s ease;
@@ -9951,5 +9953,4 @@ textarea.form-control {
   width: 100%;
   margin: 0;
   border-bottom: 1px solid #ccc;
-}
 }
