@@ -9954,3 +9954,33 @@ textarea.form-control {
   margin: 0;
   border-bottom: 1px solid #ccc;
 }
+
+
+
+/* scrolling text */
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 35px;
+  width: auto;
+  /* border: 1px solid; */
+  margin: 2px;
+}
+
+.wrapper h3 {
+  position: absolute;
+  margin: 0;
+  line-height: auto;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
