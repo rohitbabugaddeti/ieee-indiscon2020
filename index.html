@@ -4,92 +4,94 @@
     <title>IEEE | INDISCON 2020 HOME</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
+  
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+  
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
+  
     <link rel="stylesheet" href="css/aos.css">
-
+  
     <link rel="stylesheet" href="css/ionicons.min.css">
-
+  
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    
+  
+  
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Style11.css"/>
+    <link rel="stylesheet" href="css/Style11.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" media="all" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <style>
-     div {
-       text-align: justify;
-       text-justify: inter-word;
-       font-family: 'calibri';
-       font-size: 20px ;
-     }
-     </style>
-     <style>
-       .center {
-         margin: auto;
-         width: 90%;
-         border: 0px ;
-         padding: 0px;
-       }
-       </style>
-    <script>  
-     // building select nav for mobile width only 
-        $(function(){
-          // building select menu
-          $('<select />').appendTo('nav');
-        
-          // building an option for select menu
+      div {
+        text-align: justify;
+        text-justify: inter-word;
+        font-family: 'calibri';
+        font-size: 20px;
+      }
+    </style>
+    <style>
+      .center {
+        margin: auto;
+        width: 90%;
+        border: 0px;
+        padding: 0px;
+      }
+    </style>
+    <script>
+      // building select nav for mobile width only 
+      $(function () {
+        // building select menu
+        $('<select />').appendTo('nav');
+
+        // building an option for select menu
+        $('<option />', {
+          'selected': 'selected',
+          'value': '',
+          'text': 'Choose Page...'
+        }).appendTo('nav select');
+
+        $('nav ul li a').each(function () {
+          var target = $(this);
+
           $('<option />', {
-            'selected': 'selected',
-            'value' : '',
-            'text': 'Choose Page...'
+            'value': target.attr('href'),
+            'text': target.text()
           }).appendTo('nav select');
-        
-          $('nav ul li a').each(function(){
-            var target = $(this);
-        
-            $('<option />', {
-              'value' : target.attr('href'),
-              'text': target.text()
-            }).appendTo('nav select');
-        
-          });
-        
-          // on clicking on link
-          $('nav select').on('change',function(){
-            window.location = $(this).find('option:selected').val();
-          });
+
         });
-        
-        // show and hide sub menu
-        $(function(){
-          $('nav ul li').hover(
-            function () {
-              //show its submenu
-              $('ul', this).slideDown(150);
-            }, 
-            function () {
-              //hide its submenu
-              $('ul', this).slideUp(150);			
-            }
-          );
+
+        // on clicking on link
+        $('nav select').on('change', function () {
+          window.location = $(this).find('option:selected').val();
         });
-        //end
-        </script> 
-</head>
+      });
+
+      // show and hide sub menu
+      $(function () {
+        $('nav ul li').hover(
+          function () {
+            //show its submenu
+            $('ul', this).slideDown(150);
+          },
+          function () {
+            //hide its submenu
+            $('ul', this).slideUp(150);
+          }
+        );
+      });
+          //end
+    </script>
+  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+  </head>
 
   <body>
     <img src="images/weblogos.png" class='responsive'></img>
@@ -158,9 +160,7 @@
                 <li><a  href="about_venue_city.html"><b>About venue city</b></a></li>
                 <li><a href="about_venue.html"><b>About conference venue</b></a></li>
               </ul>  </li>
-              <li><a href="sponsorship.html"><b>Sponsorship</b></a></li>
-							<li>
-
+              <li><a href="sponsorship.html"><b>Sponsorship</b></a></li></ul>
   </nav>
     <section class="home-slider owl-carousel" class='responsive'>
       <div class="slider-item" class='image-responsive' style="background-image:url(images/homeimage.jpg);" data-stellar-background-ratio="0.5">
@@ -193,6 +193,7 @@
         </div>
       </div>
     </section>
+
 
     <div class="heading-section mb-5">
       <div class="pl-md-5 ml-md-5 pt-md-0"><br><br>
@@ -336,9 +337,6 @@
    <script src="js/bootstrap-datepicker.js"></script>
    <script src="js/jquery.timepicker.min.js"></script>
    <script src="js/scrollax.min.js"></script>
-   
-   
    <script src="js/main.js"></script>
-    
    </body>
    </html>
