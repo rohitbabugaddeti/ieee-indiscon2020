@@ -9471,22 +9471,6 @@ textarea.form-control {
     text-transform: uppercase;
     letter-spacing: .1em; }
 
-.consultation {
-  background: #46b7de;
-  color: rgba(255, 255, 255, 0.9);
-  padding-top: 4em;
-  padding-bottom: 4em; }
-  .consultation.consul {
-    background: #24a1cd; }
-  .consultation h3 {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 500; }
-  .consultation .btn-custom {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 600; }
 
 
 
