@@ -37,7 +37,7 @@ http://www.freshdesignweb.com/drop-down-responsive-menu-with-css3-and-jquery.htm
 	margin:0 0 0 3px;
 	float:right;
 	display:block;
-	background:url('images/nav_arrow.png') no-repeat left -8px;
+	background: no-repeat left -8px;
 	font:0/0 a;
 }
 #fdw nav ul li.current {
@@ -48,7 +48,7 @@ http://www.freshdesignweb.com/drop-down-responsive-menu-with-css3-and-jquery.htm
 	cursor: default;
 }
 #fdw nav ul li.current a span {
-	background:url('../images/nav_arrow.png') no-repeat left 0;
+	background: no-repeat left 0;
 }
 #fdw nav ul li.current ul li a {
 	cursor:pointer;
@@ -78,7 +78,7 @@ http://www.freshdesignweb.com/drop-down-responsive-menu-with-css3-and-jquery.htm
 	height:8px;
 	display:block;
 	border:none;
-	background:url('images/arrow_top.png') no-repeat left top;
+	background: no-repeat left top;
 }
 #fdw nav ul li ul.sub_menu li {
 	float:none;
